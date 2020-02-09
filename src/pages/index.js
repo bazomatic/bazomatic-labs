@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -7,15 +8,27 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <SEO title="&nbsp;" />
+    <h1>so uh...</h1>
+    <p>
+      the site is an extreme work in progress. it's a place for me to tinker
+      with various technologies and rapidly prototype. eventually, it'll look better; that time is not now.
+    </p>
+    <ProjectDisplayCase>
+      <Link to="/shader-test-space-travel-bg">
+        shader test: wrap texture into tunnel and "move" through it
+      </Link>
+    </ProjectDisplayCase>
+    <br />
+    <br />
   </Layout>
 )
+
+const ProjectDisplayCase = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const ProjectDisplay = styled.div``
 
 export default IndexPage

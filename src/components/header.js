@@ -1,11 +1,20 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import {
+  GiGearHammer,
+  GiBigGear,
+  GiGears,
+  GiBubblingFlask,
+  GiFizzingFlask,
+  GiRoundBottomFlask,
+} from "react-icons/gi"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#11DD11`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -20,16 +29,24 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `black`,
             textDecoration: `none`,
           }}
         >
+          <GiGears />
           {siteTitle}
         </Link>
       </h1>
+      <Subtext>
+        a veritable frankenstein's monster of frameworks and libraries
+      </Subtext>
     </div>
   </header>
 )
+
+const Subtext = styled.h6`
+  margin-bottom: 0;
+`
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
