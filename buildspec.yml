@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     S3_BUCKET: bazomaticlabs.com
-    DISTRO_ID: 
+    DISTRO_ID: E2LMXYI8IGLFYD
 
 phases:
   install:
