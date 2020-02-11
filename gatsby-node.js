@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 
-// this is no longer needed, react-loadable solved this
+// this is no longer needed, react-loadable solved the issue of building phaser into the prod bundle
 // exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 //   if (stage === "build-html") {
 //     actions.setWebpackConfig({
