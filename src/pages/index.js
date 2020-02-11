@@ -15,7 +15,7 @@ const IndexPage = () => (
       with various technologies and rapidly prototype. eventually, it'll look better; that time is not now.
     </p>
     <ProjectDisplayCase>
-      <Link to="/shader-test-space-travel-bg">
+      <Link to="/tunnelwrap/">
         shader test: wrap texture into tunnel and "move" through it
       </Link>
     </ProjectDisplayCase>
