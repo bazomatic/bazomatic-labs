@@ -1,5 +1,6 @@
 import React from "react";
 import Phaser from "phaser";
+import styled from "styled-components";
 import TunnelScene from "./TunnelScene";
 import TunnelPipeline from "./TunnelPipeline";
 import RainbowWavePipeline from "./RainbowWavePipeline";
@@ -25,9 +26,13 @@ const phaser = {
   fire: function() {
     const config = {
       type: Phaser.WEBGL,
-      width: 1280,
-      height: 720,
-      parent: document.getElementById("phaserContainer"),
+      scale: {
+        parent: document.getElementById("phaserContainer"),
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        mode: Phaser.Scale.FIT,
+        width: 1280,
+        height: 720,
+      },
       scene: [TunnelScene],
       settings: {
         mapAdd: {
@@ -63,10 +68,19 @@ class GameCanvas extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Viewport>
         <div id="phaserContainer" />
-      </div>
-    );
+      </Viewport>
+    )
   }
 }
+
+const Viewport = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+`;
+
 export default GameCanvas;

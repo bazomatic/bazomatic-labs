@@ -16,6 +16,7 @@ void main() {
   // vec2 p = (-resolution.xy + 2.0*gl_FragCoord.xy)/resolution.y;
 
   // vec2 p = (-mouse.xy+gl_FragCoord.xy)/resolution.y;
+  // the lines above and below have the same effect
   vec2 p = vec2(
       (gl_FragCoord.x-mouse.x)/resolution.y,
       (mouse.y-gl_FragCoord.y)/resolution.y
